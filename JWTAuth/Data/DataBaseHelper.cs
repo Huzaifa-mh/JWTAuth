@@ -18,6 +18,7 @@ namespace JWTAuth.Data
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
+                ///async
                  con.Open();
                 int count;
                 string checkQuery = "Select count(*) from Users where Username = @Username";
